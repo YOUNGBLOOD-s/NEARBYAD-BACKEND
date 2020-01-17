@@ -11,7 +11,7 @@
 |dust|int|YES|||
 |continents|int|YES|||
 
-### nationtb
+### avertb
 |Field|Type|Null|Key|Default|Extra|
 |---|---|---|---|---|---|
 |idx|int|NO|**PK**||auto_increment|

@@ -1,7 +1,19 @@
 # NEARBYAD-BACKEND
 백앤드 개발 버전관리
 
-## DataBase
+## :dart: Springboot
+### Value Object
+#### 1) ReqForm : Frontend -> 1:1 상담신청 요청 시, 받는 정보
+|Field|Type|
+|---|---|
+|name|String|
+|age|int|
+|email|String|
+|tel|String|
+|date|String|
+|text|String|
+
+## :dart: DataBase
 
 ### nationtb
 |Field|Type|Null|Key|Default|Extra|
@@ -40,5 +52,8 @@
 |hum10|int|YES|||
 |hum11|int|YES|||
 |hum12|int|YES|||
+
+
+
 
 

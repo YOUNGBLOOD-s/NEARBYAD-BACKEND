@@ -1,23 +1,37 @@
 create database yb_travel;
 use yb_travel;
-drop table yb_travel;
 
 -- 나라 table
 create table nationtb (
 	 idx int auto_increment primary key,
-     name varchar(30),
+     name varchar(30) UNIQUE,
      dust int, 
      Continents int
 );
+drop table nationtb;
+desc nationtb;
+select * from nationtb;
+
 -- [Europe] 
-insert into nationtb values('Germany', 80, 1); 
-insert into nationtb values('Italy', 168, 1); 
-insert into nationtb values('France', 33, 1); 
+insert into nationtb(name, dust, continents) values('Germany', 80, 1); 
+insert into nationtb(name, dust, continents) values('Italy', 168, 1); 
+insert into nationtb(name, dust, continents) values('France', 33, 1); 
 
 -- [Africa]
-insert into nationtb values('Dubai', 80, 1); 
-insert into nationtb values('Egypt', 80, 1); 
-insert into nationtb values('Kenya', 80, 1); 
+insert into nationtb(name, dust, continents) values('Egypt', 105, 2); 
+insert into nationtb(name, dust, continents) values('Kenya', 110, 2); 
+
+-- [Asia]
+insert into nationtb(name, dust, continents) values('Mongolia', 184, 3); 
+insert into nationtb(name, dust, continents) values('Vietnam', 95, 3); 
+insert into nationtb(name, dust, continents) values('Vladivostok', 72, 3); 
+insert into nationtb(name, dust, continents) values('Shanghai', 97, 3); 
+insert into nationtb(name, dust, continents) values('Thailand', 91, 3); 
+
+-- [North America]
+insert into nationtb(name, dust, continents) values('USA', 4, 4); 
+insert into nationtb(name, dust, continents) values('Canada', 52, 4); 
+insert into nationtb(name, dust, continents) values('California ', 35, 4); 
 
 
 

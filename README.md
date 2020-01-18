@@ -3,7 +3,10 @@
 
 ****
 ## 💪 to-do list
-* nationtb에 cnt 속성 추가
+* 테이블 상세
+  * nationtb에 cnt 속성 추가 -> 나라에 추가하는게 맞는지, 콘텐츠에 추가하는게 맞는지 회의 필요함
+  * 테이블 명 전부 %tb로 변경하기
+  * nation FK 전부 UNIQUE 속성 추가하기
 * 프론트/임베디드 value object 정의
   * front 상담 요청 시 받는 정보 db에 저장하기
   * front 클릭 시, cnt ++

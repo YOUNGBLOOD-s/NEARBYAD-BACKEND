@@ -34,6 +34,13 @@
 |name|varchar(30)|YES|**UNIQUE**||
 |dust|int|YES|||
 |continents|int|YES|||
+|cnt|int|YES|||
+* idx : 일련변호
+* name : 나라이름
+* dust : 미세먼지 수치
+* continents : 대륙정보 (1-Europe, 2-Africa, 3-Asia, 4-north America)
+* cnt : 나라 별 터치 수
+
 
 ### avertb
 |Field|Type|Null|Key|Default|Extra|
@@ -64,8 +71,35 @@
 |hum10|int|YES|||
 |hum11|int|YES|||
 |hum12|int|YES|||
+* idx : 일련변호
+* nation : 나라 일련번호
+* tmp1-tmp12 : 1월-12월 평균온도
+* hum1-hum12 : 1월-12월 평균습도
 
 
+### contentstb
+|Field|Type|Null|Key|Default|Extra|
+|---|---|---|---|---|---|
+|idx|int|NO|**PK**||auto_increment|
+|nation|int|YES|**UNIQUE**|||
+|seq|int|YES|||
+|detail|varchar(10000)|YES|||
+|image|varchar(500)|YES|||
+* idx : 일련번호
+* nation : 나라 일련번호
+* seq : 경로 별 순서 1, 2, 3, ...
+* detail : 경로 별 상세정보
+* image : 경로 별 이미지 url
 
 
-
+### imagetb
+|Field|Type|Null|Key|Default|Extra|
+|---|---|---|---|---|---|
+|idx|int|NO|**PK**||auto_increment|
+|nation|int|YES|**UNIQUE**|||
+|type|int|YES|
+|url|varchar(500)|YES|
+* idx : 일련번호
+* nation : 나라 일련번호
+* type : 정도 (1-추움, 2-더움, 3-밝음, 4-어두움)
+* url : 이미지 url 

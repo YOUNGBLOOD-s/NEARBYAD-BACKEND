@@ -1,6 +1,15 @@
 # NEARBYAD-BACKEND
 백앤드 개발 버전관리
 
+****
+## 💪 to-do list
+* nationtb에 cnt 속성 추가
+* 프론트/임베디드 value object 정의
+  * front 상담 요청 시 받는 정보 db에 저장하기
+  * front 클릭 시, cnt ++
+  * embedded 센서 값 받아서 계산 후 front에 알맞은 데이터 전달
+****
+
 ## :dart: Springboot
 ### Value Object
 #### 1) ReqForm : Frontend -> 1:1 상담신청 요청 시, 받는 정보

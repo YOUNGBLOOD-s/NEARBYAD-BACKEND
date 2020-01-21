@@ -86,13 +86,19 @@
 |idx|int|NO|**PK**||auto_increment|
 |nation|int|YES|**UNIQUE**|||
 |seq|int|YES|||
+|day|int|YES|||
 |detail|varchar(10000)|YES|||
 |image|varchar(500)|YES|||
+|tofrom|varchar(50)|YES|||
+|transport|varchar(20)|YES|||
 * idx : 일련번호
 * nation : 나라 일련번호
 * seq : 경로 별 순서 1, 2, 3, ...
+* day : 일차
 * detail : 경로 별 상세정보
 * image : 경로 별 이미지 url
+* tofrom : 이동경로
+* transport : 이동수단
 
 
 ### imagetb

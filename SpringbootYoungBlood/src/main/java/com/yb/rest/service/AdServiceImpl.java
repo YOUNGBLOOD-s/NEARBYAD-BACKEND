@@ -19,4 +19,9 @@ public class AdServiceImpl implements IAdService {
 		return repo.getImgs(id);
 	}
 
+	@Override
+	public List<String> getModalcontents(int id) {
+		return repo.getModalcontents(id);
+	}
+
 }

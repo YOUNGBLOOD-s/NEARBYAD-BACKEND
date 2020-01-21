@@ -50,6 +50,7 @@ public class AdController {
 		for(int idx=0; idx<nation.size(); idx++) {
 			int id = Countrylist.get(idx).getId();
 			List<String> imgs = ser.getImgs(id);
+			List<String> modalContents = ser.getModalcontents(id);
 			//List<String> modalContent = ser.getModalcontent();
 			//Countrylist.add(new Clickdetail(id, temp, humid, name, content, thumbnail, imgs, modalContent));
 		}

@@ -13,8 +13,13 @@ public class AdDaoImpl implements IAdDao{
 	@Autowired
 	SqlSession session;
 	
-	
+	@Override
 	public List<String> getImgs(int id) {
-		return session.selectList("ad.getimgs", id);
+		return session.selectList("ad.selectimglist", id);
+	}
+
+	@Override
+	public List<String> getModalcontents(int id) {
+		return session.selectList("ad.selectmodallist", id);
 	}
 }

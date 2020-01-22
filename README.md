@@ -5,9 +5,10 @@
 ## 💪 to-do list
 * 테이블 상세
   * ~~sql 온도, 습도 float형 변환~~
-  * nationtb 노출횟수/고객idx/가중치 
+  * ~~nationtb 노출횟수/고객idx/가중치~~
   * imagetb에 밝을때(추움, 더움) 어두울때(추움, 더움) 기준으로 다시
-  * 미세먼지 좋음(1) 보통(2) 나쁨(3) 매우나쁨(4) 으로 변경
+  * adboardtb dust, rough는 int형으로 
+  * ~~미세먼지 좋음(1) 보통(2) 나쁨(3) 매우나쁨(4) 으로 변경~~
 * Spring
   * ~~RecoNation vo 정의 >> RecoCountry로 변경하여 진행함~~
   * 온습도에 의한 나라 선택 기준 정하기
@@ -33,6 +34,12 @@
 
 ## :dart: DataBase
 
+### membertb
+|Field|Type|Null|Key|Default|Extra|
+|---|---|---|---|---|---|
+|idx|int|NO|**PK**||auto_increment|
+|name|varchar(30)|YES|**UNIQUE**||
+
 ### nationtb
 |Field|Type|Null|Key|Default|Extra|
 |---|---|---|---|---|---|
@@ -40,14 +47,20 @@
 |name|varchar(30)|YES|**UNIQUE**||
 |dust|int|YES|||
 |continents|int|YES|||
-|url|varchar(200)|YES|
-|cnt|int|YES|||
+|clickcnt|int|YES||0|
+|showcnt|int|YES||0|
+|customer|int|YES|**MUL**|
+|weight|int|YES|
+|speech|varchar(100)|YES|||
 * idx : 일련변호
 * name : 나라이름
-* dust : 미세먼지 수치
+* dust : 미세먼지 수치 (1-좋음, 2-보통, 3-나쁨, 4-매우나쁨)
 * continents : 대륙정보 (1-Europe, 2-Africa, 3-Asia, 4-north America)
-* url : 나라 별 대표 이미지 경로
-* cnt : 나라 별 터치 수
+* clickcnt : 클릭 카운트
+* showcnt : 광고 카운트
+* customer : 고객 idx FK
+* weight : 가중치
+* speech : 음성 합성 텍스트
 
 
 ### avertb
@@ -100,22 +113,18 @@
 * url : 이미지 url 
 
 
-### speechtb
-|Field|Type|Null|Key|Default|Extra|
-|---|---|---|---|---|---|
-|idx|int|NO|**PK**||auto_increment|
-|text|varchar(50)|YES||||
-* idx : 일련번호
-* text : 합성 
-
 ### adboardtb
 |Field|Type|Null|Key|Default|Extra|
 |---|---|---|---|---|---|
 |idx|int|NO|**PK**||auto_increment|
 |temp|float|YES||||
 |humid|float|YES||||
+|dust|float|YES||||
+|rough|float|YES||||
 |info|varchar(100)|YES||||
 * idx : 일련번호
 * temp : 평균 온도
 * humid : 평균 습도
+* dust : 미세먼지 농도
+* rough : 조도
 * info : 센서에 대한 정보

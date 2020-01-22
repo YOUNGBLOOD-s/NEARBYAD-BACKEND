@@ -4,7 +4,7 @@
 ****
 ## 💪 to-do list
 * 테이블 상세
-  * sql 온도, 습도 float형 변환
+  * ~~sql 온도, 습도 float형 변환~~
 * Spring
   * ~~RecoNation vo 정의 >> RecoCountry로 변경하여 진행함~~
   * 온습도에 의한 나라 선택 기준 정하기
@@ -50,30 +50,10 @@
 |---|---|---|---|---|---|
 |idx|int|NO|**PK**||auto_increment|
 |nation|int|YES|**UNIQUE**|||
-|tem1|int|YES|||
-|tem2|int|YES|||
-|tem3|int|YES|||
-|tem4|int|YES|||
-|tem5|int|YES|||
-|tem6|int|YES|||
-|tem7|int|YES|||
-|tem8|int|YES|||
-|tem9|int|YES|||
-|tem10|int|YES|||
-|tem11|int|YES|||
-|tem12|int|YES|||
-|hum1|int|YES|||
-|hum2|int|YES|||
-|hum3|int|YES|||
-|hum4|int|YES|||
-|hum5|int|YES|||
-|hum6|int|YES|||
-|hum7|int|YES|||
-|hum8|int|YES|||
-|hum9|int|YES|||
-|hum10|int|YES|||
-|hum11|int|YES|||
-|hum12|int|YES|||
+|tem1|float|YES|||
+|tem12|float|YES|||
+|hum1|float|YES|||
+|hum12|float|YES|||
 * idx : 일련변호
 * nation : 나라 일련번호
 * tmp1-tmp12 : 1월-12월 평균온도

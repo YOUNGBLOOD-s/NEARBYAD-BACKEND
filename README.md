@@ -37,11 +37,13 @@
 |name|varchar(30)|YES|**UNIQUE**||
 |dust|int|YES|||
 |continents|int|YES|||
+|url|varchar(200)|YES|
 |cnt|int|YES|||
 * idx : 일련변호
 * name : 나라이름
 * dust : 미세먼지 수치
 * continents : 대륙정보 (1-Europe, 2-Africa, 3-Asia, 4-north America)
+* url : 나라 별 대표 이미지 경로
 * cnt : 나라 별 터치 수
 
 
@@ -65,16 +67,17 @@
 |---|---|---|---|---|---|
 |idx|int|NO|**PK**||auto_increment|
 |nation|int|YES|**UNIQUE**|||
-|seq|int|YES|||
 |day|int|YES|||
+|seq|int|YES|||
+|title|varchar(50)|YES|
 |detail|varchar(10000)|YES|||
 |image|varchar(500)|YES|||
 |tofrom|varchar(50)|YES|||
 |transport|varchar(20)|YES|||
 * idx : 일련번호
 * nation : 나라 일련번호
-* seq : 경로 별 순서 1, 2, 3, ...
 * day : 일차
+* seq : 일차 별 경로 순서 1, 2, 3, ...
 * detail : 경로 별 상세정보
 * image : 경로 별 이미지 url
 * tofrom : 이동경로
@@ -92,3 +95,12 @@
 * nation : 나라 일련번호
 * type : 정도 (1-추움, 2-더움, 3-밝음, 4-어두움)
 * url : 이미지 url 
+
+
+### speechtb
+|Field|Type|Null|Key|Default|Extra|
+|---|---|---|---|---|---|
+|idx|int|NO|**PK**||auto_increment|
+|text|varchar(50)|YES||||
+* idx : 일련번호
+* text : 합성 

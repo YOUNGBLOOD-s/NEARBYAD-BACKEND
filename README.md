@@ -104,3 +104,15 @@
 |text|varchar(50)|YES||||
 * idx : 일련번호
 * text : 합성 
+
+### adboardtb
+|Field|Type|Null|Key|Default|Extra|
+|---|---|---|---|---|---|
+|idx|int|NO|**PK**||auto_increment|
+|temp|float|YES||||
+|humid|float|YES||||
+|info|varchar(100)|YES||||
+* idx : 일련번호
+* temp : 평균 온도
+* humid : 평균 습도
+* info : 센서에 대한 정보

@@ -5,6 +5,8 @@
 ## 💪 to-do list
 * 테이블 상세
   * ~~sql 온도, 습도 float형 변환~~
+  * nationtb 노출횟수/고객idx/가중치 
+  * imagetb에 밝을때(추움, 더움) 어두울때(추움, 더움) 기준으로 다시 
 * Spring
   * ~~RecoNation vo 정의 >> RecoCountry로 변경하여 진행함~~
   * 온습도에 의한 나라 선택 기준 정하기

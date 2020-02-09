@@ -2,35 +2,6 @@
 백앤드 개발 버전관리
 
 ****
-## 💪 to-do list
-* 테이블 상세
-  * ~~sql 온도, 습도 float형 변환~~
-  * ~~nationtb 노출횟수/고객idx/가중치~~
-  * imagetb에 밝을때(추움, 더움) 어두울때(추움, 더움) 기준으로 다시
-  * adboardtb dust, rough는 int형으로 
-  * ~~미세먼지 좋음(1) 보통(2) 나쁨(3) 매우나쁨(4) 으로 변경~~
-* Spring
-  * ~~RecoNation vo 정의 >> RecoCountry로 변경하여 진행함~~
-  * 온습도에 의한 나라 선택 기준 정하기
-  * 이미지 배열, 콘텐츠 배열 받는 함수 각각 만들기 >> mybatis부분만 남았음
-  * 데이터 json 형식으로 묶기
-  * 프론트로 전송하기
-****
-
-## :dart: Springboot
-### Value Object
-#### 1) ReqForm : Frontend -> 1:1 상담신청 요청 시, 받는 정보
-|Field|Type|
-|---|---|
-|name|String|
-|age|int|
-|email|String|
-|tel|String|
-|date|String|
-|text|String|
-
-***
-
 
 ## :dart: DataBase
 
@@ -38,18 +9,40 @@
 |Field|Type|Null|Key|Default|Extra|
 |---|---|---|---|---|---|
 |idx|int|NO|**PK**||auto_increment|
-|name|varchar(30)|YES|**UNIQUE**||
+|username|varchar(20)|YES|**UNIQUE**||
+|password|varchar(20)|
+|company|varchar(20)|
+|grade|int|||0|
+* idx : 일련번호
+* username : user의 id
+* password : user의 pw
+* company : user의 회사 명
+* grade : user의 등급(0-일반, 1-관리자, 2-일반광고주, 3-광고주, 4-광고주)
+
+### gradetb
+|Field|Type|Null|Key|Default|Extra|
+|---|---|---|---|---|---|
+|idx|int|NO|**PK**|||
+|name|varchar(20)||**UNIQUE**||
+|grade|int|||0|
+* idx : 일련번호
+* name : 등급 이름
+* grade : 등급 번호
+
+***
+이하 수정중
+***
 
 ### nationtb
 |Field|Type|Null|Key|Default|Extra|
 |---|---|---|---|---|---|
 |idx|int|NO|**PK**||auto_increment|
-|name|varchar(30)|YES|**UNIQUE**||
+|en_name|varchar(30)|YES|**UNIQUE**||
+|ko_name|varchar(30)|YES|**UNIQUE**||
 |dust|int|YES|||
 |continents|int|YES|||
-|clickcnt|int|YES||0|
 |showcnt|int|YES||0|
-|customer|int|YES|**MUL**|
+|customer|int|YES|**MUL**|0|
 |weight|int|YES|
 |speech|varchar(100)|YES|||
 * idx : 일련변호

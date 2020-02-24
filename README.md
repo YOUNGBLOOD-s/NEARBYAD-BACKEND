@@ -46,9 +46,7 @@
          }
 * Error Response
   * code : 404
-  * content
-  
-        { "resmsg" : }
+  * content : `{ "resmsg" : }`
 
 ## :dart: DataBase
 
